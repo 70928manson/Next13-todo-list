@@ -18,9 +18,11 @@ const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
         </thead>
         <tbody>
           { tasks.map((task) => {
-            return <tr key={task.id}>
-              <td>{task.text}</td>
-            </tr>
+            return (
+              <tr key={task.id}>
+                <td>{task.text}</td>
+              </tr>
+            )
           }) }
         </tbody>
       </table>
