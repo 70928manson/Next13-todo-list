@@ -5,7 +5,7 @@ const baseUrl = 'http://localhost:3001';
 //get, add, delete, edit
 
 export const getAllTodos = async (): Promise<ITask[]> => {
-    const response = await fetch(`${baseUrl}/task`);
+    const response = await fetch(`${baseUrl}/task`, { cache: 'no-store' }); //next13 dynamic data fetching
     const todos = await response.json();
     return todos;
 }
